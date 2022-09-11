@@ -1,0 +1,35 @@
+<!-- footer v2 section-->
+<footer class="ht-footer full-width-ft">
+	<div class="row">
+		<div class="ft-copyright">
+		</div>
+		<div class="flex-parent-ft">
+			<div class="flex-child-ft item1" style="width:70%">
+				 <a href="#"><img class="logo" src="static/images/logo1.png" alt=""></a>
+				<div class="desc" style="    position: relative;top: -30px;"> <p> <strong style="font-size:15px;color: #ffffff;">Blockter </strong>is free streaming website where to watch movies online free without registration required. With a big database and great features, we're confident Blockter is the best free movies online website in the space that you can't simply miss!</p>
+				<p> <a href="{% url "contact:contact"%}" target="_blank"><i class="fab fa" style="font-size:25px;color: #ffffff;"></i> Connect us </a> </p> <p class="small font-italic">This site does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</p> </div>
+			</div>
+
+			<div class="flex-child-ft item2">
+				<h4>Resources</h4>
+				<ul>
+					<li><a href="{% url "Home:landing"%}">Landing</a></li> 
+					<li><a href="{% url "Home:index"%}">Home</a></li>
+					<li><a href="{% url "Movie:movie"%}">Movie</a></li>
+					<li><a href="{% url "Movie:featured"%}">Featured</a></li>
+				</ul>
+			</div>
+
+			<div class="flex-child-ft item4">
+				<h4>Account</h4>
+				<ul>
+					<li><a href="{% url "accounts:profile"%}">My Profile</a></li> 
+					<li><a href="{% url "accounts:signup"%}">Sign up</a></li>	
+					<li><a href="{% url "login"%}">Login</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</footer>
+<!-- end of footer v2 section-->

@@ -1,0 +1,142 @@
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content"style="  border-radius: 10px;">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="POST" action="#">
+		{% csrf_token %}
+        	<div class="row">
+        		 <label for="username" style="  border-radius: 10px;">
+                    Username:
+                    <input type="text" name="username" id="username" placeholder="username"  required="required" style="border-radius: 10px;" />
+                </label>
+        	</div>
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******"  required="required" style="border-radius: 10px;" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="{% url 'password_reset'%}">Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit" style="border-radius: 10px;">Login</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content"style="border-radius: 10px;">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="POST">
+		{% csrf_token %}
+            <div class="row">
+                 <label for="username-2">
+                    Username:
+					{{form.username}}
+                </label>
+            </div>
+           
+            <div class="row">
+                <label for="email-2">
+                    your email:
+					{{form.email}}
+                </label>
+            </div>
+             <div class="row">
+                <label for="password-2">
+                    Password:
+					{{form.password1}}
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+					{{form.password2}}
+                </label>
+            </div>
+           <div class="row">
+             <button type="submit"style="border-radius: 10px;",>sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header full-width-hd ">
+		<div class="row">
+			<nav id="mainNav" class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="{% url 'Home:index'%}"><img class="logo" src="static/images/logo1.png" alt="" width="119" height="58"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						{% comment %} <li class="dropdown first">
+							<a href="{% url 'Home:index'%}">
+							Home
+							</a>
+						</li>
+
+						<li class="dropdown first">
+							<a href="{% url 'Movie:movie'%}">
+							movies
+							</a>
+						</li>
+
+						<li class="dropdown first">
+							<a href={% url 'Furmovie:featured'%}>
+							Featured
+							</a>
+						</li> {% endcomment %}
+
+
+					</ul>
+					{% comment %} <ul class="nav navbar-nav flex-child-menu menu-right">              
+						<li><a href="{% url 'contact:contact'%}">Contact</a></li>
+						{% if request.user.is_authenticated %}
+							<li ><a href="{% url "accounts:profile"%}">Profile</a></li>						
+						{% else %}
+							<li ><a href="{% url "login"%}">LOG In</a></li>						
+						{% endif %}
+
+						<li class="btn "><a href="{% url "accounts:signup" %}">sign up</a></li>
+					</ul> {% endcomment %}
+					<ul class="nav navbar-nav flex-child-menu menu-right">               
+						<li><a href="{% url "contact:contact"%}">contact</a></li>
+						{% if request.user.is_authenticated %}
+							<li ><a href="{% url "accounts:profile"%}">Profile</a></li>						
+						{% else %}
+							<li class="loginLink"><a href="#">LOG In</a></li>					
+						{% endif %}
+						
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+	    	</nav>
+
+		</div>	
+</header>
+<!-- END | Header -->

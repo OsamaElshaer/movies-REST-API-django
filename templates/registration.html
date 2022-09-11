@@ -1,0 +1,122 @@
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+{% load static %}
+<!doctype html>
+<html lang="zxx">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Blockter</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
+		rel="stylesheet">
+	<!-- Template CSS -->
+</head>
+
+<body oncontextmenu = "return false ;" style="background:#020d18;overflow: visible;">
+
+	  <!-- contact1 -->
+	  <section class="w3l-contact-1">
+		<div class="contacts-9 py-5">
+		  <div class="container py-lg-4">
+			<div class="headerhny-title text-center">
+				<h4 class="sub-title text-center"></h4>
+				<p class="hny-title mb-lg-5 mb-4"></p>
+			</div>
+			<div class="contact-view mt-lg-5 mt-4">
+			  <div class="conhny-form-section">
+				{% block content %}
+				
+				{% endblock content %}
+			  </div>
+
+
+			</div>
+		  </div>
+		</div>
+
+	  </section>
+	  <!-- /contact1 -->
+
+</body>
+
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- Template JavaScript -->
+<!--/theme-change-->
+<script src="assets/js/theme-change.js"></script>
+<!-- //theme-change-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+	$(function () {
+		$('.navbar-toggler').click(function () {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+	$(window).on("scroll", function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 80) {
+			$("#site-header").addClass("nav-fixed");
+		} else {
+			$("#site-header").removeClass("nav-fixed");
+		}
+	});
+
+	//Main navigation Active Class Add Remove
+	$(".navbar-toggler").on("click", function () {
+		$("header").toggleClass("active");
+	});
+	$(document).on("ready", function () {
+		if ($(window).width() > 991) {
+			$("header").removeClass("active");
+		}
+		$(window).on("resize", function () {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+		});
+	});
+</script>
+<!--//MENU-JS-->
+<script src="{% static 'js/bootstrap.min.js ' %} "></script>
+<script src="{% static 'js/jquery.js ' %} "></script>
+<script src="{% static 'js/plugins.js ' %} "></script>
+<script src="{% static 'js/plugins2.js ' %} "></script>
+<script src="{% static 'js/custom.js ' %} "></script>
+<!-- new scripts -->
+<script src="{% static 'js/slider.js ' %} "></script>
+<script>
+document.onkeydown=function(e)
+{
+	if(event.keycode == 123)
+	{
+		retuen false ;
+	}
+	if (e.ctrlkey && e.shiftkey && e.keycode == 'I'.charCodeAt(0))
+	{
+		return false ;
+	}
+	if(e.ctrlkey && e.shiftkey && e.keycode == 'J'.charCodeAt(0))
+	{
+		return false ;
+	}
+	if(e.ctrlkey && e.shiftkey && e.keycode == 'U'.charCodeAt(0))
+	{
+		return false ;
+	}
+}
+</script>

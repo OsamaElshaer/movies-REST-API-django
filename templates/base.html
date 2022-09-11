@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js ' %} " lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js ' %} " lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js ' %} ">
+<head>
+	<!-- Basic need -->
+	<title>blockter</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slideshow.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	
+	
+	
+</head>
+<body oncontextmenu = "return false ;" style="background-color:#020d18";>
+{% include 'include/nav.html' %}
+{% block content %}
+
+
+
+{% endblock  %}
+
+
+<script src="{% static 'js/jquery.js ' %} "></script>
+<script src="{% static 'js/plugins.js ' %} "></script>
+<script src="{% static 'js/plugins2.js ' %} "></script>
+<script src="{% static 'js/custom.js ' %} "></script>
+<!-- new scripts -->
+<script src="{% static 'js/slider.js ' %} "></script>
+<script>
+document.onkeydown=function(e)
+{
+	if(event.keycode == 123)
+	{
+		retuen false ;
+	}
+	if (e.ctrlkey && e.shiftkey && e.keycode == 'I'.charCodeAt(0))
+	{
+		return false ;
+	}
+	if(e.ctrlkey && e.shiftkey && e.keycode == 'J'.charCodeAt(0))
+	{
+		return false ;
+	}
+	if(e.ctrlkey && e.shiftkey && e.keycode == 'U'.charCodeAt(0))
+	{
+		return false ;
+	}
+}
+</script>
+</body>
+
+
+</html>
+
